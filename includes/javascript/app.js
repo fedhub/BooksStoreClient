@@ -70,7 +70,6 @@ function books_by_month(month, $scope){
         url: url,
         type: 'POST'
     }).done(function(res){
-        console.log(res);
         $scope.rel_books= JSON.parse(res);
         $scope.$apply();
         $('.book-cont').css('display', 'none');
