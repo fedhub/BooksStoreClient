@@ -1,11 +1,7 @@
 var app = angular.module('myapp', []);
-
-//var base_url = 'http://www.best-biss.com';
-var base_url = 'http://localhost:3000';
-
+var base_url = 'http://booksstore.herokuapp.com';
 var books = [];
 var months = [];
-
 app.controller('appCtrl', function($scope){
 
     var selected = '';
