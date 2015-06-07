@@ -1,0 +1,19 @@
+.main{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .book-cont{
+    @include size(100%, 15px);
+    margin-top: 5px;
+    margin-left: 20px;
+    p{
+      line-height: 15px;
+      font-size: 15px;
+      font-weight: bold;
+      color: rgba(#333, 0.8);
+    }
+  }
+  #book-by-name, .books-by-month{
+    display: none;
+  }
+}

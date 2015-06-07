@@ -11,8 +11,28 @@
     <script src="includes/javascript/app.js"></script>
 </head>
 <body>
-    <section class="wrapper">
-
+    <section class="wrapper" ng-controller="appCtrl">
+        <section class="header">
+            <section class="buttons-cont">
+                <section class="button" ng-click="book_by_name()"><p>book name by id</p></section>
+                <section class="button" ng-click="books_by_month()"><p>books by month</p></section>
+            </section>
+            <section class="select-cont">
+                <select id="book-name">
+                    <option>choose id</option>
+                    <option ng-repeat="book in books">{{book.id}}</option>
+                </select>
+                <select id="month">
+                    <option>choose month</option>
+                    <option ng-repeat="month in months">{{month}}</option>
+                </select>
+            </section>
+        </section>
+        <section class="main">
+            <section class="book-cont" ng-repeat="book in books"><p>id: {{book.id}}, name: {{book.name}}, published: {{book.published}}</p></section>
+            <section class="book-cont" id="book-by-name"><p>{{book_name}}</p></section>
+            <section class="book-cont books-by-month" ng-repeat="rel_book in rel_books"><p>id: {{rel_book.id}}, name: {{rel_book.name}}, published: {{rel_book.published}}</p></section>
+        </section>
     </section>
 </body>
 </html>
